@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+
+        int jam,tunjangan,gajipokok;
+
+        System.out.print("Masukkan nama anda: ");
+        String nama = scan.nextLine();
+        
+        System.out.println("Masukkan Jam Lembur: ");
+        jam = scan.nextInt();
+
+        tunjangan = 0;
+        gajipokok = 100000;
+
+        if (jam >= 1) {
+            if (jam <= 10) {
+                tunjangan = jam*1000 + 100000;
+            } else {
+                if (jam <= 20) {
+                     tunjangan = jam*1000 + 200000;
+                } else {
+                    tunjangan = jam*1000 + 300000;
+                }
+            }
+        } else {
+            System.out.println("Input Jam Lembur anda tidak Valid!");
+        }
+
+        //HASIL OUTPUT
+        System.out.printf("Tunjangan yang anda dapatkan adalah, %d",tunjangan);
+
+        System.out.println("\n\n============");
+        System.out.printf("Total Gaji = %d + %d\n\n",gajipokok,tunjangan);
+        
+        int totalgaji = gajipokok+tunjangan;
+        System.out.println(nama + " = Rp. " + totalgaji);   
+
+    }
+
+    
+}
