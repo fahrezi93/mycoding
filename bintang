@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class bintang2 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int batasan = input.nextInt();
+        int index = 0;
+
+        for (int i=0; i<batasan; i++) {
+            for (int j=0; j<batasan; j++) {
+                if (j>i) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print(index);
+                    if (index == 9) {
+                        index = 0;
+                    } else {
+                        index ++;
+                    }
+                }
+            }
+            System.out.println();
+        }
+        
+    
+    }
+    
+}
