@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        int a,b,c,d,e,f,g,h,i;
+
+        Scanner input = new Scanner(System.in);
+
+        a = input.nextInt();
+        b = input.nextInt();
+        c = input.nextInt();
+        d = input.nextInt();
+        e = input.nextInt();
+        f = input.nextInt();
+        g = input.nextInt();
+        h = input.nextInt();
+        i = input.nextInt();
+
+        System.out.println(a + " " + d + " " + g);
+        System.out.println(b + " " + e + " " + h);
+        System.out.println(c + " " + f + " " + i);
+
+        input.close();
+    }
+    
+}
